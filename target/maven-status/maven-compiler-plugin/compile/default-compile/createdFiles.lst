@@ -1,0 +1,5 @@
+com\example\workshopmongo\resources\UserResource.class
+com\example\workshopmongo\services\UserService.class
+com\example\workshopmongo\domain\User.class
+com\example\workshopmongo\repository\UserRepository.class
+com\example\workshopmongo\WorkshopmongoApplication.class
