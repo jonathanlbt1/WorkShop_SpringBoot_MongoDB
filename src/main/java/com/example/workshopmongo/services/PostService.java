@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PostService {
@@ -16,9 +15,9 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
 
-    public Post findById(String id) {
-        Optional<Post> post = postRepository.findById(id);
-        return post.orElseThrow(()-> new ObjectNotFoundException("Post nao encontrado"));
+    public Post findById(String id) throws ObjectNotFoundException {
+        Post post = postRepository.findById(id).get();
+        return post;
     }
 
     public List<Post> findByTitle(String text) {
